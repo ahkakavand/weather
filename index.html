@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Title</title>
+</head> 
+<body>
+    <main class="container">
+        <div class="wrapper">
+            <div class="search margin-bottom-24">
+                <input class="search__input" type="search" oninput="handleInputChange(event)" onblur="handelInputBlur()" onfocus="handleInputFocus()">
+                <div class="search__suggestion"></div>
+            </div>
+            <div class="temprature margin-bottom-40">
+                <div class="text-center temprature__current-degree">+37 c</div>
+                <figure class="sun">
+                    <img class="weathe__icon" src="./assets/img/sun.png" alt="">
+                </figure>
+                <article class="city-temprature">
+                    <h1 class="city-temprature__title">Dubai, AE</h1>
+                    <span class="city-temprature__current-day">Thursday</span>
+                    <ul class="margin-top-16">
+                        <li class="info">
+                            <figure class="info__icon margin-right-8">
+                                <img src="./assets/img/water-drop.png" alt="">
+                            </figure>
+                            <span class="humidity info__description">39%</span>
+                        </li>
+                        <li class="info">
+                            <figure class="info__icon margin-right-8">
+                                <img src="./assets/img/water-drop.png" alt="">
+                            </figure>
+                            <span class="wind info__description">west, 7.7 m/s</span>
+                        </li>
+                        <li class="info">
+                            <figure class="info__icon margin-right-8">
+                                <img src="./assets/img/water-drop.png" alt="">
+                            </figure>
+                            <span class="pressure info__description">1003 hPa</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <section>
+                <ul class="cards__wrapper">
+                    <li class="card card__shadow">
+                        <figure class="card__icon">
+                            <img src="./assets/img/sun.png" alt="">
+                        </figure>
+                        <div class="card__title text-center margin-bottom-24">Friday</div>
+                        <div class="card__description text-center">+36 C</div>
+                    </li>
+                    <li class="card card__shadow">
+                        <figure class="card__icon">
+                            <img src="./assets/img/sun.png" alt="">
+                        </figure>
+                        <div class="card__title text-center margin-bottom-24">Friday</div>
+                        <div class="card__description text-center">+36 C</div>
+                    </li>
+                    <li class="card card__shadow">
+                        <figure class="card__icon">
+                            <img src="./assets/img/sun.png" alt="">
+                        </figure>
+                        <div class="card__title text-center margin-bottom-24">Friday</div>
+                        <div class="card__description text-center">+36 C</div>
+                    </li>
+                    <li class="card card__shadow">
+                        <figure class="card__icon">
+                            <img src="./assets/img/sun.png" alt="">
+                        </figure>
+                        <div class="card__title text-center margin-bottom-24">Friday</div>
+                        <div class="card__description text-center">+36 C</div>
+                    </li>
+                    <li class="card card__shadow">
+                        <figure class="card__icon">
+                            <img src="./assets/img/sun.png" alt="">
+                        </figure>
+                        <div class="card__title text-center margin-bottom-24">Friday</div>
+                        <div class="card__description text-center">+36 C</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <script src="./js/api/city.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/weather.js"></script>
+</body>
+</html>

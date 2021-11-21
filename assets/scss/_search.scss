@@ -1,0 +1,61 @@
+$input-background-color: rgba(#fff, 0.3);
+$imput-border-radus: $border-radius;
+$input-height: 5rem;
+$input-padding-horizontal: 0 $padding;
+$input-border-color-active: #86b2f1;
+$input-color:#fff;
+
+.search {
+
+    position: relative;
+
+    &__input {
+        background-color: $input-background-color;
+        border-radius: $imput-border-radus;
+        width: 100%;
+        color: $input-color;
+        height: $input-height;
+        padding: $input-padding-horizontal;
+        box-sizing: border-box;
+        outline: none;
+        border: 0.2rem solid transparent;
+
+        &:focus {
+            border-color: $input-border-color-active;
+        }
+
+    }
+
+    &__suggestion {
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        right: 0;
+        top: 100%;
+        display: none;
+        max-height: 300px;
+        overflow: auto;
+        border-bottom-left-radius: $imput-border-radus;
+        border-bottom-right-radius: $imput-border-radus;
+        padding: 16px;
+        background-color: #B3E5FC;
+
+        &--active {
+            display: block;
+        }
+    }
+}
+
+
+
+.search__item {
+    padding: 10px 0;
+    color: #FF6F00;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all ease 0.3s;
+}
+
+.search__item:hover {
+    color: #f8a261;
+}

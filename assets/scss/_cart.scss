@@ -1,0 +1,59 @@
+$description-color: $secendory-text-color;
+$tilte-color: $primary-text-color;
+
+.cards__wrapper {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+
+    @include  just-tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    @include  just-desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+}
+
+.card {
+    background-color: #68b3e9;
+    border-radius: $border-radius * 2;
+    box-sizing: border-box;
+    padding: 3.2rem;
+
+    @include tablet-desktop {
+        width: 30%;
+    }
+
+    @include  just-desktop {
+        width: calc(20% - 40px);
+    }
+
+    &__shadow {
+        @extend .card;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 10%);
+    }
+
+    &__icon {
+        width: 7rem;
+        margin: 2rem auto;
+    }
+
+    &__title {
+        color: $tilte-color;
+        font-size: 2.4rem;
+        font-weight: bolder;
+        font-weight: bold;
+    }
+
+    &__description {
+        color: $description-color;
+        font-size: 1.8rem;
+    }
+}
