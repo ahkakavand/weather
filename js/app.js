@@ -132,7 +132,7 @@ function chengCurrentWaetherInfo(weather) {
     const iconEl = document.querySelector('.weathe__icon');
 
     cityEl.innerHTML = `${weather.name}, ${weather.sys.country}`
-    degreeEl.innerHTML = `${Math.round(weather.main.temp - 273)} °C`
+    degreeEl.innerHTML = `${Math.round(weather.main.temp)} °C`
     iconEl.src = `https://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`;
     dayEl.innerHTML = moment(weather.dt, 'X').format('dddd');
     humidityEl.innerHTML = `${weather.main.humidity}%`
